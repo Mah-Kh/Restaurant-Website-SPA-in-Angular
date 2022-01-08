@@ -1,0 +1,57 @@
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+  <div fxFlex>
+    <div>
+        <h3>About Us</h3>
+        <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="column" fxLayout.gt-sm="row">
+      <div fxFlex="70">
+        <h2>Our History</h2>
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        <p>  consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      </div>
+      <div fxFlex="30">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+            <h2>Facts At a Glance</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <dl>
+              <dt>Lorem ipsum </dt>
+              <dd>dolor sit amet</dd>
+              <dt>consetetur </dt>
+              <dd>sadipscing elitr</dd>
+              <dt>sed diam nonumy </dt>
+              <dd>eirmod tempor</dd>
+            </dl>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div fxFlex>
+    <h2>Corporate Leadership</h2>
+    <mat-list [@expand]>
+        <mat-list-item *ngFor="let leader of leaders">
+          <img matListAvatar src={{leader.image}} alt={{leader.name}}>
+          <h3 matLine> {{leader.name}} {{leader.abbr}}</h3>
+          <p matLine>
+            <span> {{leader.designation}} </span>
+          </p>
+          <p matLine>
+            <span>{{leader.description}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+      <div [hidden]="leaders">
+        <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+      </div>
+  </div>
+</div>

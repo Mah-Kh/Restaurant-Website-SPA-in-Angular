@@ -1,0 +1,38 @@
+$lt-gray: #ddd;
+$background-dark: #fea712;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+$background-moredark: #44a23d; 
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.jumbotron {
+    @include zero-margin(70px,30px);
+    color:floralwhite;
+    min-height: 400px;
+    background-image: url('/../assets/images/header-large-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    > div {
+        margin-left: 20%;
+    }
+    h1 {
+        text-shadow: 1px 1px 2px #8a8484;
+        font-size: 6.6rem;
+    }
+    p {
+        font-size: 2.8rem;
+        font-style: italic;
+        text-shadow: 1px 1px 2px #8a8484;
+    }
+}
+.active {
+    background: $background-moredark;
+}
+.mat-toolbar.mat-primary {
+    background: $background-dark;
+}
